@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    flex-direction: column;
+}
+
+form {
+    border: 1px solid black;
+    padding: 2%;
+    display: grid;
+    grid-column: auto;
+}
+
+label {
+    font-weight: bolder;
+    margin: 2%;
+    font-size: 2vmin;
+    display: inline-block;
+}
+
+#txtuser,
+#txtcontra {
+    display: inline-block;
+    margin: 2%;
+}

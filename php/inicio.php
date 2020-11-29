@@ -9,35 +9,11 @@ $conexion=$conex->conectarse();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../fotos/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/inicio.css">
     <title>Inicio de sesión</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Open Sans', sans-serif;
-            height: 100%;
-            flex-direction: column;
-        }
-        
-        form {
-            border: 1px solid black;
-            padding: 2%;
-            display: grid;
-            grid-column: auto;
-        }
-        label {
-            font-weight: bolder;
-            margin: 2%;
-            font-size: 2vmin;
-            display: inline-block;
-        }
-        #txtuser, #txtcontra {
-            display: inline-block;
-            margin: 2%;
-        }
-    </style>
 </head>
 
 <body>
@@ -52,4 +28,6 @@ $conexion=$conex->conectarse();
     </form>
 </body>
 
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="../js/inicio.js"></script>
 </html>
