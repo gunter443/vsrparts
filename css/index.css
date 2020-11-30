@@ -81,3 +81,8 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+#carouselExampleIndicators {
+    width: 100%;
+    /*ax-height: 350px;*/
+}
