@@ -76,7 +76,7 @@ include_once "conexionBBDD.php";
             <div id="listcadars" class="d-flex flex-wrap">
                 <?php
                 include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
-                $sql = $conexion->query("SELECT * FROM productos;");
+                $sql = $conexion->query("SELECT * FROM productos WHERE principal = '1';");
                 $productFa = $sql->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
                 foreach ($productFa as $produc) {/*lo recorremos para generar una tabla con los datos*/
                     echo "<div class='cardtamaño'><a href='produc.php?id=" . $produc->idproductos . "'>
