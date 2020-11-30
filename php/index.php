@@ -79,7 +79,7 @@ include_once "conexionBBDD.php";
                 $sql = $conexion->query("SELECT * FROM productos WHERE principal = '1';");
                 $productFa = $sql->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
                 foreach ($productFa as $produc) {/*lo recorremos para generar una tabla con los datos*/
-                    echo "<div class='cardtamaño'><a href='produc.php?id=" . $produc->idproductos . "'>
+                    echo "<div class='cardtamaño'><a href='product.php?id=" . $produc->idproductos . "'>
                     <div class='card' style='width: 18rem';>" .
                         "   <img class='card-img-top' src='../fotos/Vsr parts/" . $produc->foto_producto . ".jpg' alt='Card image cap'>" .
                         "   <div class='card-body'>";

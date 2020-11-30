@@ -9,7 +9,7 @@ $sql = $conexion->prepare("SELECT * FROM productos WHERE idproductos = ?;");
 $sql->execute([$id]);
 $producto = $sql->fetch(PDO::FETCH_OBJ);
 if ($producto === FALSE) {
-    echo "error al leer el articulo";
+    echo "<script>aler('error al leer el articulo')</script>";
     exit();
 }
 
@@ -47,8 +47,8 @@ if ($producto === FALSE) {
             <?php
             include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
             $sqlw = $conexion->query("SELECT * FROM imagenes WHERE id_producto = ?;");
+            $sqlw->execute([$id]);
             $fotos = $sqlw->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
-
 
             ?>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
