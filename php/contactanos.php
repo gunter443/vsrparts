@@ -30,34 +30,34 @@ include_once "conexionBBDD.php";
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
-                <a href="./products.php">Todos los Productos</a>
-                <a href="./contactanos.php">Contactanos</a>
+                <a href="./tProducts.html">Todos los coches</a>
+                <a href="./tProductoIndi.html">Accesorios</a>
             </div>
         </div>
         <div class="contenido">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
+                
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="../fotos/Vsr parts/pomos_a.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Pomos Rally Art</h5>
-                            <p>Valido para todos los coches</p>
-                        </div>
+                    <h5>Pomos Rally Art</h5>
+                    <p>Valido para todos los coches</p>
+                </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../fotos/Vsr parts/palanca_a.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../fotos/Vsr parts/Vsr parts/palanca_a.jpg" alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>palanca cambios</h5>
-                            <p>Para BMW</p>
-                        </div>
+                    <h5>palanca cambios</h5>
+                    <p>Para BMW</p>
+                </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../fotos/Vsr parts/junta_cul_a.jpg" alt="Third slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Junta culata</h5>
-                            <p>Para BMW 325I</p>
-                        </div>
+                    <h5>Junta culata</h5>
+                    <p>Para BMW 325I</p>
+                </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -73,30 +73,10 @@ include_once "conexionBBDD.php";
                 <!--aqui va la descripcion-->
 
             </div>
-            <div id="listcadars" class="d-flex flex-wrap">
-                <?php
-                include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
-                $sql = $conexion->query("SELECT * FROM productos;");
-                $productFa = $sql->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
-                foreach ($productFa as $produc) {/*lo recorremos para generar una tabla con los datos*/
-                    echo "<div class='cardtamaño'><a href='produc.php?id=" . $produc->idproductos . "'>
-                    <div class='card' style='width: 18rem';>" .
-                        "   <img class='card-img-top' src='../fotos/Vsr parts/" . $produc->foto_producto . ".jpg' alt='Card image cap'>" .
-                        "   <div class='card-body'>";
-                    echo "<h5 class='card-title'>" . $produc->nombre_producto . "</h5>";
-                    echo "<p class='card-text'> De " . $produc->marca_producto . " Modelos " . $produc->modelo_producto . " </p>";
-                    echo "</div>
-                    </div></a></div>";
-                }
-
-                ?>
+            <div>
                 <!--php de crear targetas https://getbootstrap.com/docs/4.0/components/card/-->
-            </div>
+            </div>            
         </div>
-    </div>
-    <div class="pie">
-        <p>VSR PARTS shop oficial</p>
-        <p>2020 &copy</p>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

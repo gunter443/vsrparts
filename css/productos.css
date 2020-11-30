@@ -84,32 +84,6 @@ body {
 }
 
 .carousel,
-.carousel-inner>.carousel-item>img {
-    height: 300px;
-}
-
-#listcadars {
-    padding: 20px 10px;
-    margin: 20px 0;
-    /* display: grid;
-    grid-template-columns: auto auto;*/
-}
-
-.cardtamaño {
-    width: 45%;
-}
-
-.pie {
-    background-color: rgb(207, 207, 207);
-    text-align: center;
-    margin-top: 5%;
-    padding-top: 0.01%;
-    padding-bottom: 0.01%;
-    position: relative;
-}
-
-a:link,
-a:visited,
-a:active {
-    text-decoration: none;
+.carousel-inner>.item>img {
+    height: 400px;
 }
