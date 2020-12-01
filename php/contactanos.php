@@ -30,8 +30,8 @@ include_once "conexionBBDD.php";
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
-                <a href="./tProducts.html">Todos los coches</a>
-                <a href="./tProductoIndi.html">Accesorios</a>
+                <a href="./products.php">Todos los Productos</a>
+                <a href="./contactanos.php">Contactanos</a>
             </div>
         </div>
         <div class="contenido">

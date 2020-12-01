@@ -74,6 +74,7 @@ include_once "conexionBBDD.php";
 
             </div>
             <div id="listcadars" class="d-flex flex-wrap">
+                
                 <?php
                 include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
                 $sql = $conexion->query("SELECT * FROM productos WHERE principal = '1';");

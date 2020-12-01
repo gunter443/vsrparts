@@ -30,12 +30,30 @@ include_once "conexionBBDD.php";
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
-                <a href="./tProducts.html">Todos los coches</a>
-                <a href="./tProductoIndi.html">Accesorios</a>
+                <a href="./products.php">Todos los Productos</a>
+                <a href="./contactanos.php">Contactanos</a>
             </div>
         </div>
         <div class="contenido">
-            
+        <div id="listcadars" class="d-flex flex-wrap">
+                <?php
+                include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
+                $sql = $conexion->query("SELECT * FROM productos;");
+                $productFa = $sql->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
+                foreach ($productFa as $produc) {/*lo recorremos para generar una tabla con los datos*/
+                    echo "<div class='cardtamaño'><a href='product.php?id=" . $produc->idproductos . "'>
+                    <div class='card' style='width: 18rem';>" .
+                        "   <img class='card-img-top' src='../fotos/Vsr parts/" . $produc->foto_producto . ".jpg' alt='Card image cap'>" .
+                        "   <div class='card-body'>";
+                    echo "<h5 class='card-title'>" . $produc->nombre_producto . "</h5>";
+                    echo "<p class='card-text'> De " . $produc->marca_producto . " Modelos " . $produc->modelo_producto . " </p>";
+                    echo "</div>
+                    </div></a></div>";
+                }
+
+                ?>
+                <!--php de crear targetas https://getbootstrap.com/docs/4.0/components/card/-->
+            </div>
         </div>
     </div>
 </body>
