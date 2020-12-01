@@ -30,12 +30,13 @@ include_once "conexionBBDD.php";
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
-                <a href="./products.php">Todos los Productos</a>
-                <a href="./contactanos.php">Contactanos</a>
+                <a href="./productos.php">Todos los Productos</a>
+                <a href="./contactanos.html">Contactanos</a>
             </div>
         </div>
         <div class="contenido">
         <div id="listcadars" class="d-flex flex-wrap">
+        <!-- filstro buscador por jquery  https://www.w3schools.com/jquery/jquery_filters.asp -->
                 <?php
                 include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
                 $sql = $conexion->query("SELECT * FROM productos;");

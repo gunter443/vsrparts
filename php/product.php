@@ -38,8 +38,8 @@ if ($producto === FALSE) {
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
-                <a href="./products.php">Todos los Productos</a>
-                <a href="./contactanos.php">Contactanos</a>
+                <a href="./productos.php">Todos los Productos</a>
+                <a href="./contactanos.html">Contactanos</a>
             </div>
         </div>
 
