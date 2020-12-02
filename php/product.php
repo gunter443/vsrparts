@@ -57,7 +57,6 @@ if ($producto === FALSE) {
                     $contador = 0;
                     foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
                         if ($contador == 0) {
-                            # code...
                             echo "<li data-target='#carouselExampleIndicators' data-slide-to='0' class='active'></li>";
                         } else {
                             echo "<li data-target='#carouselExampleIndicators' data-slide-to='" . $contador . "'></li>";

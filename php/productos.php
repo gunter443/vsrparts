@@ -27,6 +27,7 @@ include_once "conexionBBDD.php";
         <div class="cabecera">
             <div class="nombre">
                 <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>
+                <input id="search" type="text" placeholder="Search..">
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
