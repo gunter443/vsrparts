@@ -46,9 +46,9 @@ if ($producto === FALSE) {
         <div class="contenido">
             <?php
             include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
-            $sqlw = $conexion->query("SELECT * FROM imagenes WHERE id_producto = ?;");
-            $sqlw->execute([$id]);
-            $fotos = $sqlw->fetch(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
+            $sqlw = $conexion->query("SELECT * FROM imagenes WHERE id_producto = $id;"); //esto devuelce false y entonces todo da error, meter todo en un if esto dentro el resto else echo fallo en las fotos
+            //$sql->execute([$id]); https://es.stackoverflow.com/questions/263721/fatal-error-call-to-a-member-function-fetch-all-on-boolean-in  mirar explicacion
+            $fotos = $sqlw->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
 
             ?>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

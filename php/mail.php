@@ -8,9 +8,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-include_once 'lib/Exception.php';
-include_once 'lib/PHPMailer.php';
-include_once 'lib/SMTP.php';
+include_once '../lib/Exception.php';
+include_once '../lib/PHPMailer.php';
+include_once '../lib/SMTP.php';
 
 $mail = new PHPMailer(true);
 
