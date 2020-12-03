@@ -48,7 +48,7 @@ if ($producto === FALSE) {
             include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
             $sqlw = $conexion->query("SELECT * FROM imagenes WHERE id_producto = ?;");
             $sqlw->execute([$id]);
-            $fotos = $sqlw->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
+            $fotos = $sqlw->fetch(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
 
             ?>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -92,10 +92,11 @@ if ($producto === FALSE) {
                     <p class="lead"><?php echo $producto->descripcion_producto; ?></p>
                 </div>
             </div>
-            <form class="form-inline"><!--sin probar ni ver aun formulario envio correo-->
+            <form class="form-inline"  action='mail.php' method="post" id='mailForm' ><!--sin probar ni ver aun formulario envio correo-->
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputPassword2" class="sr-only">telefono o correo de contacto </label>
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="telefono o correo de contacto ">
+                    <label for="email" class="sr-only">telefono o correo de contacto </label>
+                    <input type="password" class="form-control" id="email" name="email" placeholder="telefono o correo de contacto ">                    
+                    <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" name="productonombre">
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
             </form>
