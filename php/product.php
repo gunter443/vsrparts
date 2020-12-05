@@ -25,7 +25,7 @@ if ($producto === FALSE) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="../fotos/icono.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Página Producto</title>
 </head>
 
@@ -37,7 +37,7 @@ if ($producto === FALSE) {
                 <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>
             </div>
             <div class="fila_botones">
-                <a href="./principal.html">Página Principal</a>
+                <a href="./index.php">Página Principal</a>
                 <a href="./productos.php">Todos los Productos</a>
                 <a href="./contactanos.html">Contactanos</a>
             </div>
@@ -46,60 +46,72 @@ if ($producto === FALSE) {
         <div class="contenido">
             <?php
             include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
-            $sqlw = $conexion->query("SELECT * FROM imagenes WHERE id_producto = $id;"); //esto devuelce false y entonces todo da error, meter todo en un if esto dentro el resto else echo fallo en las fotos
-            //$sql->execute([$id]); https://es.stackoverflow.com/questions/263721/fatal-error-call-to-a-member-function-fetch-all-on-boolean-in  mirar explicacion
-            $fotos = $sqlw->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
+            if ($sqlw = $conexion->query("SELECT * FROM imagenes WHERE id_productos = $id;")) { //esto devuelce false y entonces todo da error, meter todo en un if esto dentro el resto else echo fallo en las fotos
+                //$sql->execute([$id]); https://es.stackoverflow.com/questions/263721/fatal-error-call-to-a-member-function-fetch-all-on-boolean-in  mirar explicacion
+                $fotos = $sqlw->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
 
             ?>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <?php
+                        $contador = 0;
+                        foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
+                            if ($contador == 0) {
+                                echo "<li data-target='#carouselExampleIndicators' data-slide-to='0' class='active'></li>";
+                            } else {
+                                echo "<li data-target='#carouselExampleIndicators' data-slide-to='" . $contador . "'></li>";
+                            }
+                            $contador++;
+                        }
+                        ?>
+                    </ol>
+                    <div class="carousel-inner">
                     <?php
-                    $contador = 0;
+                    $contador=0;
                     foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
                         if ($contador == 0) {
-                            echo "<li data-target='#carouselExampleIndicators' data-slide-to='0' class='active'></li>";
-                        } else {
-                            echo "<li data-target='#carouselExampleIndicators' data-slide-to='" . $contador . "'></li>";
-                        }
-                    }
-                    ?>
-                </ol>
-                <div class="carousel-inner">
-                    <?php
-                    $contador = 0;
-                    foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
                         echo "<div class='carousel-item active'>";
-                        echo "<img class='d-block w-100' src='' alt='First slide'>";
+                        echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . "' alt='First slide'>";
                         echo "</div>";
+                        }else {
+                            echo "<div class='carousel-item'>";
+                        echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . "' alt='First slide'>";
+                        echo "</div>";
+                        }
+                        $contador++;
                     }
+                }else{
+                    echo "error con las fotos" ;
+                }
                     ?>
 
 
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4"><?php echo $producto->nombre_producto; ?></h1>
-                    <p class="h3"><?php echo $producto->precio_producto; ?></p>
-                    <p class="lead"><?php echo $producto->descripcion_producto; ?></p>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4"><?php echo $producto->nombre_producto; ?></h1>
+                        <p class="h3"><?php echo $producto->precio_producto; ?>  &#8364</p>
+                        <p class="lead"><?php echo $producto->descripcion_producto; ?></p>
+                    </div>
                 </div>
-            </div>
-            <form class="form-inline"  action='mail.php' method="post" id='mailForm' ><!--sin probar ni ver aun formulario envio correo-->
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="email" class="sr-only">telefono o correo de contacto </label>
-                    <input type="password" class="form-control" id="email" name="email" placeholder="telefono o correo de contacto ">                    
-                    <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" name="productonombre">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-            </form>
+                <form class="form-inline" action='mail.php' method="post" id='mailForm'>
+                    <!--sin probar ni ver aun formulario envio correo-->
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="email" class="sr-only">telefono o correo de contacto </label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="telefono o correo de contacto ">
+                        <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" name="productonombre">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+                </form>
 
 
 
@@ -109,6 +121,6 @@ if ($producto === FALSE) {
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../js/productos.js"></script>
+<script src="../js/product.js"></script>
 
 </html>

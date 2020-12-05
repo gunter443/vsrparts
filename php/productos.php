@@ -30,7 +30,7 @@ include_once "conexionBBDD.php";
                 <input id="search" type="text" placeholder="Search..">
             </div>
             <div class="fila_botones">
-                <a href="./principal.html">Página Principal</a>
+                <a href="./index.php">Página Principal</a>
                 <a href="./productos.php">Todos los Productos</a>
                 <a href="./contactanos.html">Contactanos</a>
             </div>

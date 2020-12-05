@@ -20,11 +20,11 @@
                 $_SESSION['sesion']="dog";
                 setcookie("nombre", $username, time()+(86400));
                 $_SESSION['nombre'] = $username;
-                header("Location: index.php");
+                header("Location: listaAdmin.php");
 
             } else {
                 echo("<script>alert('Usuario y/o contraseña incorrecto(s)');
-                window.location.href='./index.php';</script>");
+                window.location.href='./contactanos.html';</script>");
                 
                 //header("Location: inicio.php");
             }
