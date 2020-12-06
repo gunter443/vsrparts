@@ -66,24 +66,22 @@ if ($producto === FALSE) {
                         ?>
                     </ol>
                     <div class="carousel-inner">
-                    <?php
-                    $contador=0;
-                    foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
-                        if ($contador == 0) {
-                        echo "<div class='carousel-item active'>";
-                        echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . "' alt='First slide'>";
-                        echo "</div>";
-                        }else {
-                            echo "<div class='carousel-item'>";
-                        echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . "' alt='First slide'>";
-                        echo "</div>";
+                        <?php
+                        $contador = 0;
+                        foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
+                            if ($contador == 0) {
+                                echo "<div class='carousel-item active'>";
+                                echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . ".jpg' alt='First slide'>";
+                                echo "</div>";
+                            } else {
+                                echo "<div class='carousel-item'>";
+                                echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . ".jpg' alt='First slide'>";
+                                echo "</div>";
+                            }
+                            $contador++;
                         }
-                        $contador++;
-                    }
-                }else{
-                    echo "error con las fotos" ;
-                }
-                    ?>
+
+                        ?>
 
 
                     </div>
@@ -96,22 +94,27 @@ if ($producto === FALSE) {
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <h1 class="display-4"><?php echo $producto->nombre_producto; ?></h1>
-                        <p class="h3"><?php echo $producto->precio_producto; ?>  &#8364</p>
-                        <p class="lead"><?php echo $producto->descripcion_producto; ?></p>
-                    </div>
+            <?php
+            } else {
+                echo "error con las fotos";
+            }
+            ?>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4"><?php echo $producto->nombre_producto; ?></h1>
+                    <p class="h3"><?php echo $producto->precio_producto; ?> &#8364</p>
+                    <p class="lead"><?php echo $producto->descripcion_producto; ?></p>
                 </div>
-                <form class="form-inline" action='mail.php' method="post" id='mailForm'>
-                    <!--sin probar ni ver aun formulario envio correo-->
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="email" class="sr-only">telefono o correo de contacto </label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="telefono o correo de contacto ">
-                        <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" name="productonombre">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-                </form>
+            </div>
+            <form class="form-inline" action='mail.php' method="post" id='mailForm'>
+                <!--sin probar ni ver aun formulario envio correo-->
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="email" class="sr-only">telefono o correo de contacto </label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="telefono o correo de contacto ">
+                    <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" name="productonombre">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+            </form>
 
 
 

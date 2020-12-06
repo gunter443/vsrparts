@@ -1,7 +1,7 @@
 <?php
 require_once "conexionBBDD.php";
-$conex = new Conet();
-$conexion=$conex->conectarse();
+//$conex = new Conet();
+//$conexion=$conex->conectarse();
 ?>
 <!DOCTYPE html>
 <html lang="en">

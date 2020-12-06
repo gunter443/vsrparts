@@ -26,7 +26,8 @@ if (!$_SESSION['sesion']) {
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>
+                <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>                
+                <button id="cerrarses" class="mini">admin</button>
             </div>
         </div>
         <div class="contenido">
@@ -34,10 +35,10 @@ if (!$_SESSION['sesion']) {
             <div>
                 <form action="./insertar.php" method="post">
                     <label for="nomPro">Nombre Producto<span>*</span></label>
-                    <input type="text" name="nomPro" id="nomPro" placeholder="nombre producto" pattern="[A-Z]" title="Nombre Producto" required>
+                    <input type="text" name="nomPro" id="nomPro" placeholder="nombre producto" title="Nombre Producto" required>
                     <br>
                     <label for="precio">Precio<span>*</span></label>
-                    <input type="text" name="precio" id="precio" pattern="[0-9]" placeholder="Precio" required>
+                    <input type="number" name="precio" id="precio" placeholder="Precio" required>
                     <br>
                     <label for="des">Descricion<span>*</span></label>
                     <textarea  type="text" name="des" id="des" placeholder="Descricion" required></textarea>
@@ -108,6 +109,6 @@ if (!$_SESSION['sesion']) {
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../js/index.js"></script>
+<script src="../js/listaAdmin.js"></script>
 
 </html>

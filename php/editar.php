@@ -7,7 +7,7 @@ include_once "conexionBBDD.php";
 $sql = $conexion->prepare("SELECT * FROM productos WHERE idproductos = ?;");
 $sql->execute([$id]);
 $productos = $sql->fetch(PDO::FETCH_OBJ);
-if ($persona === FALSE) {
+if ($productos === FALSE) {
     echo "No existe ningun empleado con ese ID";
     exit();
 }
@@ -27,18 +27,19 @@ if ($persona === FALSE) {
 </head>
 
 <body>
+    <div class="body">
     <h1>Editar Empleado</h1>
     <div>
         <form action="./guardarDatos.php" method="post">
             <input type="hidden" value="<?php echo $productos->idproductos; ?>" name="id">
             <label for="nomPro">Nombre Producto<span>*</span></label>
-            <input type="text" value="<?php echo $productos->nombre_producto; ?>" name="nomPro" id="nomPro" pattern="[A-Z]" title="Nombre Producto" required>
+            <input type="text" value="<?php echo $productos->nombre_producto; ?>" name="nomPro" id="nomPro" title="Nombre Producto" required>
             <br>
             <label for="precio">Precio<span>*</span></label>
-            <input type="text" value="<?php echo $productos->precio_producto; ?>" name="precio" id="precio" pattern="[0-9]" required>
+            <input type="number" value="<?php echo $productos->precio_producto; ?>" name="precio" id="precio" required>
             <br>
             <label for="des">Descricion<span>*</span></label>
-            <textarea type="text" value="<?php echo $productos->descripcion_producto; ?>" name="des" id="des" required></textarea>
+            <textarea type="text" value="<?php echo $productos->descripcion_producto; ?>" name="des" id="des" required><?php echo $productos->descripcion_producto; ?></textarea>
             <br>
             <label for="marcPro">Marca</label>
             <input type="text" value="<?php echo $productos->marca_producto; ?>" name="marcPro" id="marcPro">
@@ -56,9 +57,35 @@ if ($persona === FALSE) {
         </form>
 <!-- formulario de 1 campo invisible y un campo visible para añadir nombre fotos, y una lista para ver los añadidos-->
     </div>
+
     <br>
     <br>
-    <?php include "./tabla.php" ?>
+    <div class="tablafotos">
+    <table border="2">
+                <thead>
+                    <tr>
+                        <th>nombre foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
+                    $sql = $conexion->query("SELECT * FROM imagenes WHERE id_productos = $id;");
+                    $fotos = $sql->fetchAll(PDO::FETCH_OBJ);/*ejecuta la busqueda y la guardamos en un array*/
+                    foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
+                        echo '<tr><td>';
+                        echo $foto->id_productos  . "</td>";
+                    ?>
+                        <td><a href="<?php echo "eliminarfoto.php?id=" . $producto->id_img ?>">Eliminar</a></td> <!-- en el td, envía el id del empleado para poder eliminarlo-->
+                    <?php
+                        echo '</tr>';
+                    }
+
+                    ?>
+                </tbody>
+            </table>
+    </div>
+    </div>
 </body>
 
 </html>
