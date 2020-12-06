@@ -31,7 +31,7 @@ if (!$_SESSION['sesion']) {
             </div>
         </div>
         <div class="contenido">
-            <h1>Introduce un empleado</h1>
+            <h1 class="tituloForm">Introduce un empleado</h1>
             <div class="formularioadd">
                 <form action="./insertar.php" method="post">
                 <div class="form-group row">
@@ -90,7 +90,7 @@ if (!$_SESSION['sesion']) {
                         echo '<tr><td>';
                         echo $producto->idproductos  . "</td><td>";
                         echo $producto->nombre_producto . "</td><td>";
-                        echo $producto->precio_producto . "</td><td>";
+                        echo $producto->precio_producto . "</td><td class='tdDescrip'>";
                         echo $producto->descripcion_producto . "</td><td>";
                         echo $producto->marca_producto . "</td><td>";
                         echo $producto->modelo_producto . "</td><td>";

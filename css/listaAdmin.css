@@ -125,3 +125,18 @@ a:active {
 .formularioadd {
     margin: auto;
 }
+
+.tituloForm {
+    width: 100%;
+    margin: auto;
+}
+
+.tdDescrip {
+    max-height: 50px;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    overflow-x: auto;
+}
