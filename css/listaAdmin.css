@@ -1,0 +1,127 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#body {
+    height: auto;
+    margin: 0 auto;
+}
+
+#body {
+    width: 80%;
+    /*height: 100%;*/
+    /*box-sizing: border-box;*/
+    max-width: 900px;
+    height: auto;
+    padding: 1vmin;
+    background-color: var(--main-color-body);
+    margin: 0 auto;
+    /*margin-bottom: -100%;*/
+    border-left: 1px black;
+    border-right: 1px black;
+    background-color: rgba(255, 255, 255, 0.808);
+    box-shadow: 57px 47px 30px 0px rgba(73, 67, 122, 1);
+    /* derecha/izquierda-> 0 centro detras del div 
+    , altura 
+    , difuminado,
+     cuanto mas grande es ,
+      color*/
+    /*box-shadow: 0px 0px 20px 0px #2c2222ad;*/
+}
+
+body {
+    background-image: url("../fotos/lanciaFondo.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.cabecera {
+    width: 100%;
+    height: 12vmin;
+    min-height: 6vmin;
+}
+
+.nombre {
+    margin: auto;
+    width: 80%;
+    height: 50%;
+}
+
+.nombre a {
+    margin: 1%;
+}
+
+.nombre a img {
+    height: 100%;
+}
+
+.fila_botones {
+    margin: 0;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fila_botones a {
+    font-size: 1.75vmin;
+    width: 100%;
+    padding: 1vmin;
+    text-align: center;
+    background-color: rgb(255, 68, 0);
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+.fila_botones a:hover {
+    background-color: rgb(255, 115, 0)
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel,
+.carousel-inner>.carousel-item>img {
+    height: 300px;
+}
+
+#listcadars {
+    padding: 20px 10px;
+    margin: 20px 0;
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: auto auto;*/
+}
+
+.cardtamaño {
+    width: 49%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.cardtamaño>a {
+    margin: auto;
+}
+
+.pie {
+    background-color: rgb(207, 207, 207);
+    text-align: center;
+    margin-top: 5%;
+    padding-top: 0.01%;
+    padding-bottom: 0.01%;
+    position: relative;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.formularioadd {
+    margin: auto;
+}

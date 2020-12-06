@@ -18,7 +18,7 @@ if (!$_SESSION['sesion']) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="../fotos/icono.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/listaAdmin.css">
     <title>lista Productos adiministrador </title>
 </head>
 
@@ -27,39 +27,46 @@ if (!$_SESSION['sesion']) {
         <div class="cabecera">
             <div class="nombre">
                 <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>                
-                <button id="cerrarses" class="mini">admin</button>
+                <button id="cerrarses" class="mini">Cerrar sesion</button>
             </div>
         </div>
         <div class="contenido">
             <h1>Introduce un empleado</h1>
-            <div>
+            <div class="formularioadd">
                 <form action="./insertar.php" method="post">
+                <div class="form-group row">
                     <label for="nomPro">Nombre Producto<span>*</span></label>
-                    <input type="text" name="nomPro" id="nomPro" placeholder="nombre producto" title="Nombre Producto" required>
-                    <br>
+                    <input class="form-control" type="text" name="nomPro" id="nomPro" placeholder="nombre producto" title="Nombre Producto" required>
+                </div>
+                <div class="form-group row">
                     <label for="precio">Precio<span>*</span></label>
-                    <input type="number" name="precio" id="precio" placeholder="Precio" required>
-                    <br>
+                    <input class="form-control" type="number" name="precio" id="precio" placeholder="Precio" required>
+                </div>
+                <div class="form-group row">
                     <label for="des">Descricion<span>*</span></label>
-                    <textarea  type="text" name="des" id="des" placeholder="Descricion" required></textarea>
-                    <br>
+                    <textarea class="form-control" type="text" name="des" id="des" rows="4" placeholder="Descricion" required></textarea>
+                </div>
+                <div class="form-group row">
                     <label for="marcPro">Marca</label>
-                    <input type="text" name="marcPro" id="marcPro"  placeholder="Valido para Marca">
-                    <br>
+                    <input class="form-control" type="text" name="marcPro" id="marcPro"  placeholder="Valido para Marca">
+                </div>
+                <div class="form-group row">
                     <label for="modPro">Modelos</label>
-                    <input type="text" name="modPro" id="modPro"  placeholder="Valido para Modelos">
-                    <br>
+                    <input class="form-control" type="text" name="modPro" id="modPro"  placeholder="Valido para Modelos">
+                </div>
+                <div class="form-group row">
                     <label for="foto">Foto Principal</label>
-                    <input type="text" name="foto" id="foto"  placeholder="Nombre foto principal">
-                    <br>
+                    <input class="form-control" type="text" name="foto" id="foto"  placeholder="Nombre foto principal">
+                </div>
+                <div class="form-group row">
                     <label for="prin">Favorito</label>
-                    <input type="text" name="prin" id="prin" pattern="[0-1]{1}"  placeholder="Favorito">
-                    <br>
+                    <input class="form-control" type="text" name="prin" id="prin" pattern="[0-1]{1}"  placeholder="Favorito">
+                </div>
                     <input type="submit" value="Añadir Producto" id="btn">
                 </form>
             </div>
             <br>
-            <table border="2">
+            <table class="table table-sm">
                 <thead>
                     <tr>
                         <th>idproductos</th>

@@ -121,3 +121,24 @@ a:visited,
 a:active {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 750px) {
+    .cardtamaño {
+        width: 100%;
+    }
+    #body {
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .contenido .especificacines {
+        column-count: 1;
+        text-align: center;
+    }
+    #body {
+        width: 100%;
+        max-width: 100%;
+    }
+}

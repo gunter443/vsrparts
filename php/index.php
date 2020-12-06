@@ -39,21 +39,21 @@ include_once "conexionBBDD.php";
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="../fotos/Vsr parts/pomos_a.jpg" alt="First slide">
+                        <img class="d-block " src="../fotos/Vsr parts/pomos_a.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Pomos Rally Art</h5>
                             <p>Valido para todos los coches</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../fotos/Vsr parts/palanca_a.jpg" alt="Second slide">
+                        <img class="d-block " src="../fotos/Vsr parts/palanca_a.jpg" alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>palanca cambios</h5>
                             <p>Para BMW</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../fotos/Vsr parts/junta_cul_a.jpg" alt="Third slide">
+                        <img class="d-block " src="../fotos/Vsr parts/junta_cul_a.jpg" alt="Third slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Junta culata</h5>
                             <p>Para BMW 325I</p>
