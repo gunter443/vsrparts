@@ -103,8 +103,12 @@ body {
     align-items: center;
 }
 
+#carouselExampleIndicators {
+    margin: 5px auto;
+}
+
 .cardtamaño>a {
-    margin: auto;
+    margin: 10px auto;
 }
 
 .pie {

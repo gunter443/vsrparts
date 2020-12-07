@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
     $(Document).on("click", ".guardar", function() { //se pone asi para que funcione bien puesto que es un html indexado despues de la creacion de la pagina
-        if (($(this).parent().find(".uno").val()).is(':empty')) {
+        if ($(this).parent().parent().find(".uno").val()) {
             //$(this).parent().children(".tres").val() forma uno
             var id = $(".idProducto").val();
             var nombre = $(this).parent().find(".uno").val(); //forma dos
@@ -21,6 +21,7 @@ $(document).ready(function() {
             one = false;
             $.ajax({
                 url: "guardarImg.php",
+                type: "POST",
                 data: { "id": id, "nombre": nombre },
                 success: function(result) {
                     alert("se guardo bien ");
