@@ -50,19 +50,26 @@
                     <h4>Instagram</h4>
                 </div>
             </div>
-            <hr>
-            <div class="formulario">
-                <h2>¡Suscríbete a nuestra newsletter!</h2>
-                <form action="https://www.w3schools.com/action_page.php" method="GET">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" maxlength="15" pattern="[A-Za-z]*" placeholder="Nombre" title="Inserta un nombre válido" autofocus required>
-                    <label for="apellidos">Apellidos</label>
-                    <input type="text" id="apellidos" name="apellidos" maxlength="45" pattern="[A-Za-z]*" placeholder="Apellidos" title="Inserta unos apellidos válidos" required>
-                    <label for="mail">Correo Electrónico</label>
-                    <input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Correo Electrónico" title="Inserta un correo electrónico válido" required>
-                    <input type="submit" value="Enviar">
+            <div id="formemail">
+                <form action='mail.php' method="post" id='mailForm' enctype='multipart/form-data'>
+                    <table>
+                        <tr>
+                            <td class="label"> E-mail/Tel contacto : </td>
+                            <td><input type="email" id="email" name="email" class="form-input" placeholder='E-Mail' required /></td>
+                            <td class="status"></td>
+                        </tr>
+                        <tr>
+                            <td class="label"> Name : </td>
+                            <td><textarea cols="27" rows="5" id="name" name="name" placeholder='Mensaje' required></textarea></td>
+                            <td class="status"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> <input type="submit" value="envair correo" id='submit_btn' name="submit_btn" class="submit_btn" /></td>
+                        </tr>
+                    </table>
                 </form>
             </div>
+            <hr>
             <hr>
             <div class="gif">
                 <img class="gif" src="../fotos/gifContactanos.gif" alt="Visitanos!">

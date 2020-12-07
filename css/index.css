@@ -39,7 +39,7 @@ body {
     width: 100%;
     height: 12vmin;
     min-height: 6vmin;
-    border-bottom: 3px solid black;
+    background-color: rgb(233, 230, 230);
 }
 
 .nombre {
