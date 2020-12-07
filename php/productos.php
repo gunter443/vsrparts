@@ -26,8 +26,11 @@ include_once "conexionBBDD.php";
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>
-                <input id="search" type="text" placeholder="Search..">
+                <a href="./index.php"><img src="../fotos/logoPage.svg" alt="Página Principal"></a>
+                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input  id="search" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                </form>
             </div>
             <div class="fila_botones">
                 <a href="./index.php">Página Principal</a>
@@ -36,8 +39,9 @@ include_once "conexionBBDD.php";
             </div>
         </div>
         <div class="contenido">
-        <div id="listcadars" class="d-flex flex-wrap">
-        <!-- filstro buscador por jquery  https://www.w3schools.com/jquery/jquery_filters.asp -->
+            <div style="width: 100%;"><h5>Catalogo de Productos</h5></div>
+            <div id="listcadars" class="d-flex flex-wrap">
+                <!-- filstro buscador por jquery  https://www.w3schools.com/jquery/jquery_filters.asp -->
                 <?php
                 include_once "conexionBBDD.php";/*inserta el codigo de la conexion*/
                 $sql = $conexion->query("SELECT * FROM productos;");
@@ -58,6 +62,11 @@ include_once "conexionBBDD.php";
             </div>
         </div>
     </div>
+    <span class="publicidad">
+        <a href="https://www.ebay.es/usr/vsrparts"><img src="./img/ebay.png" alt="wallapop"></a>
+        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="./img/wallapop.png" alt="wallapop"></a>
+        <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="./img/insta.svg" alt=""></a>
+    </span>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

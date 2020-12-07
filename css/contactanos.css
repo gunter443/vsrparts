@@ -87,6 +87,18 @@ body {
     position: relative;
 }
 
+.publicidad img {
+    width: 100%;
+}
+
+.publicidad {
+    width: 10vmin;
+    top: 49%;
+    right: 2vmin;
+    z-index: 1;
+    position: fixed;
+}
+
 a:link,
 a:visited,
 a:active {

@@ -69,10 +69,12 @@ include_once "conexionBBDD.php";
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <div>
+            <div style="width: 100%;">
                 <!--aqui va la descripcion-->
 
             </div>
+            
+            <div style="width: 100%;"><h5>Catalogo de Productos</h5></div>
             <div id="listcadars" class="d-flex flex-wrap">
                 
                 <?php
@@ -99,6 +101,11 @@ include_once "conexionBBDD.php";
         <p>VSR PARTS shop oficial</p>
         <p>2020 &copy</p>
     </div>
+    <span class="publicidad">
+        <a href="https://www.ebay.es/usr/vsrparts"><img src="./img/ebay.png" alt="wallapop"></a>
+        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="./img/wallapop.png" alt="wallapop"></a>
+        <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="./img/insta.svg" alt=""></a>
+    </span>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

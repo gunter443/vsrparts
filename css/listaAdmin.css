@@ -108,6 +108,10 @@ body {
     margin: auto;
 }
 
+.cardtamaño>a:hover {
+    background-color: rgba(0, 255, 179, 0.404);
+}
+
 .pie {
     background-color: rgb(207, 207, 207);
     text-align: center;
@@ -121,6 +125,18 @@ a:link,
 a:visited,
 a:active {
     text-decoration: none;
+}
+
+.publicidad img {
+    width: 100%;
+}
+
+.publicidad {
+    width: 10vmin;
+    top: 49%;
+    right: 2vmin;
+    z-index: 1;
+    position: fixed;
 }
 
 .formularioadd {
