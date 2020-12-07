@@ -71,11 +71,11 @@ if ($producto === FALSE) {
                         foreach ($fotos as $foto) {/*lo recorremos para generar una tabla con los datos*/
                             if ($contador == 0) {
                                 echo "<div class='carousel-item active'>";
-                                echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . ".jpg' alt='First slide'>";
+                                echo "<img class='d-block' src='../fotos/Vsr parts/" . $foto->nombre . ".jpg' alt='First slide'>";
                                 echo "</div>";
                             } else {
                                 echo "<div class='carousel-item'>";
-                                echo "<img class='d-block w-100' src='../fotos/Vsr parts/" . $foto->nombre . ".jpg' alt='First slide'>";
+                                echo "<img class='d-block' src='../fotos/Vsr parts/" . $foto->nombre . ".jpg' alt='First slide'>";
                                 echo "</div>";
                             }
                             $contador++;

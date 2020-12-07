@@ -26,7 +26,7 @@ include_once "conexionBBDD.php";
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>
+                <a href="./index.php"><img src="../fotos/logoPage.svg" alt="Página Principal"></a>
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>

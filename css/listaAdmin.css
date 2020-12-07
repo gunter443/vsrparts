@@ -4,7 +4,7 @@
 
 #body {
     height: auto;
-    margin: 0 auto;
+    margin: 0 0;
 }
 
 #body {
@@ -39,6 +39,7 @@ body {
     width: 100%;
     height: 12vmin;
     min-height: 6vmin;
+    border-bottom: 3px solid black;
 }
 
 .nombre {
@@ -68,14 +69,14 @@ body {
     width: 100%;
     padding: 1vmin;
     text-align: center;
-    background-color: rgb(255, 68, 0);
+    background-color: rgba(96, 104, 105, 0.842);
     border: 1px solid black;
     text-decoration: none;
     color: black;
 }
 
 .fila_botones a:hover {
-    background-color: rgb(255, 115, 0)
+    background-color: rgb(65, 145, 125);
 }
 
 .contenido {
@@ -110,7 +111,7 @@ body {
 .pie {
     background-color: rgb(207, 207, 207);
     text-align: center;
-    margin-top: 5%;
+    margin-top: 0;
     padding-top: 0.01%;
     padding-bottom: 0.01%;
     position: relative;
@@ -139,4 +140,25 @@ a:active {
 table {
     width: 100%;
     overflow-x: auto;
+}
+
+@media only screen and (max-width: 750px) {
+    .cardtamaño {
+        width: 100%;
+    }
+    #body {
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .contenido .especificacines {
+        column-count: 1;
+        text-align: center;
+    }
+    #body {
+        width: 100%;
+        max-width: 100%;
+    }
 }
