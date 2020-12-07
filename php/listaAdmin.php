@@ -69,13 +69,13 @@ if (!$_SESSION['sesion']) {
             <table class="table table-sm">
                 <thead>
                     <tr>
-                        <th>idproductos</th>
-                        <th>nombre_producto</th>
-                        <th>precio_producto</th>
-                        <th>descripcion_producto</th>
-                        <th>marca_producto</th>
-                        <th>modelo_producto</th>
-                        <th>foto_producto</th>
+                        <th>id</th>
+                        <th>nombre</th>
+                        <th>precio</th>
+                        <th>descripcion</th>
+                        <th>marca</th>
+                        <th>modelo</th>
+                        <th>foto</th>
                         <th>principal</th>
                         <th>Editar</th>
                         <th>Eliminar</th>
