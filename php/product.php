@@ -121,9 +121,9 @@ if ($producto === FALSE) {
         </div>
     </div>
     <span class="publicidad">
-        <a href="https://www.ebay.es/usr/vsrparts"><img src="./img/ebay.png" alt="wallapop"></a>
-        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="./img/wallapop.png" alt="wallapop"></a>
-        <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="./img/insta.svg" alt=""></a>
+        <a href="https://www.ebay.es/usr/vsrparts"><img src="../fotos/ebay.png" alt="wallapop"></a>
+        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="../fotos/wallapop.png" alt="wallapop"></a>
+        <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="../fotos/insta.svg" alt=""></a>
     </span>
 </body>
 

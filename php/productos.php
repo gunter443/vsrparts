@@ -27,10 +27,7 @@ include_once "conexionBBDD.php";
         <div class="cabecera">
             <div class="nombre">
                 <a href="./index.php"><img src="../fotos/logoPage.svg" alt="Página Principal"></a>
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input  id="search" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-                </form>
+                <input  id="search" class="form-control" type="text" placeholder="buscador">
             </div>
             <div class="fila_botones">
                 <a href="./index.php">Página Principal</a>
@@ -39,7 +36,7 @@ include_once "conexionBBDD.php";
             </div>
         </div>
         <div class="contenido">
-            <div style="width: 100%;"><h5>Catalogo de Productos</h5></div>
+            <div style="width: 100%; padding: 10px 0 0 0;"><h3>Catalogo de Productos</h5></div>
             <div id="listcadars" class="d-flex flex-wrap">
                 <!-- filstro buscador por jquery  https://www.w3schools.com/jquery/jquery_filters.asp -->
                 <?php
@@ -63,9 +60,9 @@ include_once "conexionBBDD.php";
         </div>
     </div>
     <span class="publicidad">
-        <a href="https://www.ebay.es/usr/vsrparts"><img src="./img/ebay.png" alt="wallapop"></a>
-        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="./img/wallapop.png" alt="wallapop"></a>
-        <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="./img/insta.svg" alt=""></a>
+        <a href="https://www.ebay.es/usr/vsrparts"><img src="../fotos/ebay.png" alt="wallapop"></a>
+        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="../fotos/wallapop.png" alt="wallapop"></a>
+        <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="../fotos/insta.svg" alt=""></a>
     </span>
 </body>
 

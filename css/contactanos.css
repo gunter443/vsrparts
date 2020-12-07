@@ -91,6 +91,14 @@ body {
     width: 100%;
 }
 
+.formemail {
+    width: 100%;
+}
+
+.formemail form {
+    margin: 0 auto;
+}
+
 .publicidad {
     width: 10vmin;
     top: 49%;
