@@ -17,7 +17,7 @@ include_once "conexionBBDD.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../fotos/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../fotos/vsrLogo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
     <title>Página Principal</title>
 </head>
@@ -26,7 +26,7 @@ include_once "conexionBBDD.php";
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/logoPage.svg" alt="Página Principal"></a>
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"></a>
             </div>
             <div class="fila_botones">
                 <a href="./principal.html">Página Principal</a>
@@ -71,7 +71,7 @@ include_once "conexionBBDD.php";
             </div>
             <div style="width: 100%;">
                 <!--aqui va la descripcion-->
-                <p style="font-size: 1vmin;">Aqui os presentamos nuestra pagina oficial de productos  de VSR Parts aqui puedes encontrar todos nuestros productos, aun no tenemos un sitema eficaz de compra, pero te damos la opcion de que nos contactes y nos lances la pregunta que desees o nos avises del producto que quieres, y nosotros nos pondremos en contacto con usted lo antes posible. Si te interesa cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas tendras un acceso a nuestros productos en ebay y wallapop que ya contienen un propio sistema de pago y envios, aqui te damos todas las posibilidades y comodidades para la compra de cualquiera de nuestros productos.
+                <p style="font-size: 7vmin; padding: 15px;">Aqui os presentamos nuestra pagina oficial de productos  de VSR Parts aqui puedes encontrar todos nuestros productos, aun no tenemos un sitema eficaz de compra, pero te damos la opcion de que nos contactes y nos lances la pregunta que desees o nos avises del producto que quieres, y nosotros nos pondremos en contacto con usted lo antes posible. Si te interesa cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas tendras un acceso a nuestros productos en ebay y wallapop que ya contienen un propio sistema de pago y envios, aqui te damos todas las posibilidades y comodidades para la compra de cualquiera de nuestros productos.
             si quieres mas informacion sobre los productos envios o montaje de los productos, no dudes en contactarno.</p>
             </div>
             

@@ -17,7 +17,7 @@ include_once "conexionBBDD.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../fotos/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../fotos/vsrLogo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/productos.css">
     <title>Página Productos</title>
 </head>
@@ -26,7 +26,7 @@ include_once "conexionBBDD.php";
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/logoPage.svg" alt="Página Principal"></a>
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"></a>
                 <input  id="search" class="form-control" type="text" placeholder="buscador">
             </div>
             <div class="fila_botones">

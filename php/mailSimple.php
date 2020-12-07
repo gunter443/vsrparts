@@ -15,6 +15,7 @@ include_once 'lib/SMTP.php';
 $mail = new PHPMailer(true);
 $info_contacto =  $_POST['email'];
 $producto_nombre =  $_POST['productonombre'];
+$id =  $_POST['idpro'];
 
 try {
     //Server settings
@@ -41,7 +42,7 @@ try {
     $mail->AltBody = '';
 
     $mail->send();
-    echo 'todo correcto';
+    header("Location: product.php?id=". $id);
 } catch (Exception $e) {
     echo "error: {$mail->ErrorInfo}";
 }

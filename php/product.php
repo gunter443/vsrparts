@@ -24,7 +24,7 @@ if ($producto === FALSE) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../fotos/icono.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../fotos/vsrLogo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
     <title>Página Producto</title>
 </head>
@@ -34,7 +34,7 @@ if ($producto === FALSE) {
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"></a>
             </div>
             <div class="fila_botones">
                 <a href="./index.php">Página Principal</a>
@@ -102,16 +102,21 @@ if ($producto === FALSE) {
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1 class="display-4"><?php echo $producto->nombre_producto; ?></h1>
-                    <p class="h3"><?php echo $producto->precio_producto; ?> &#8364</p>
+                    <p class="h3 izquierda"><?php echo $producto->precio_producto; ?> &#8364</p>
                     <p class="lead"><?php echo $producto->descripcion_producto; ?></p>
+                    <div class="espProduc">
+                        <p class="btn btn-info"><?php echo $producto->marca_producto; ?></p>
+                        <p class="btn btn-info"><?php echo $producto->modelo_producto; ?></p>
+                </div>
                 </div>
             </div>
-            <form class="form-inline" action='mail.php' method="post" id='mailForm'>
+            <form class="form-inline" action='mailSimple.php' method="post" id='mailForm'>
                 <!--sin probar ni ver aun formulario envio correo-->
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="email" class="sr-only">telefono o correo de contacto </label>
                     <input type="text" class="form-control" id="email" name="email" placeholder="telefono o correo de contacto ">
-                    <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" name="productonombre">
+                    <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" id="productonombre" name="productonombre">
+                    <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
             </form>

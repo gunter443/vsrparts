@@ -38,11 +38,12 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Pregunta Generica';
-    $mail->Body    = 'info contacto: '. $info_contacto . ' \n  pregunta: \n' . $pregunta;
+    $mail->Body    = 'info contacto: '. $info_contacto . '   pregunta: ' . $pregunta;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo 'todo correcto';
+    echo("<script>alert('Correo enviado');</script>");
+    header("Location: contactanos.html");
 } catch (Exception $e) {
     echo "error: {$mail->ErrorInfo}";
 }
