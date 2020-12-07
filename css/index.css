@@ -4,7 +4,7 @@
 
 #body {
     height: auto;
-    margin: 0 auto;
+    margin: 0 0;
 }
 
 #body {
@@ -108,7 +108,7 @@ body {
 }
 
 .cardtamaño>a {
-    margin: 10px auto;
+    /*margin: 10px auto;*/
 }
 
 .pie {

@@ -6,7 +6,7 @@ $(document).ready(function() {
             $("#tabla").append("<tr><td><input class='uno' type='text'></td><td><button class='guardar'>guardar</button></td></tr>");
             one = true;
             var p = parseInt($("#tabla").children().length) - 1;
-            $($("#tabla").children()[p]).children(".uno").focus(); //coloca el foto en el imput 1 creado
+            $($("#tabla").children()[p]).find(".uno").focus(); //coloca el foto en el imput 1 creado
         }
 
     });
@@ -15,12 +15,12 @@ $(document).ready(function() {
         if ($(this).parent().parent().find(".uno").val()) {
             //$(this).parent().children(".tres").val() forma uno
             var id = $(".idProducto").val();
-            var nombre = $(this).parent().find(".uno").val(); //forma dos
-            $(this).parent().children(".uno").toggle();
+            var nombre = $(this).parent().parent().find(".uno").val(); //forma dos
+            //$(this).parent().parent().find(".uno").toggle(); //forma dos
+            $(this).parent().parent().find(".guardar").toggle();
 
             one = false;
-            $.ajax({
-                url: "guardarImg.php",
+            $.ajax("guardarImg.php", {
                 type: "POST",
                 data: { "id": id, "nombre": nombre },
                 success: function(result) {
@@ -28,8 +28,10 @@ $(document).ready(function() {
                 }
             });
             //$(location).attr('href', "guardarImg.php?id="+nombre);
+        } else {
+            alert("campo vacio ");
         }
-        alert("campo vacio ");
+
 
     });
 });
