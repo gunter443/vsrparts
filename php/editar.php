@@ -28,9 +28,9 @@ if ($productos === FALSE) {
 
 <body>
     <div id="body" class="contenedorP">
-        <h1>Editar Empleado</h1>
+        <h1>Editar Producto</h1>
         <div>
-            <form action="./guardarDatos.php" method="post">
+            <form class="editPro" action="./guardarDatos.php" method="post">
                 <input type="hidden" value="<?php echo $productos->idproductos; ?>" name="id">
                 <div class="form-group row">
                 <label for="nomPro">Nombre Producto<span>*</span></label>

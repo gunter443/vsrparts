@@ -118,7 +118,7 @@ if ($producto === FALSE) {
                     <input type="hidden" value="<?php echo $producto->nombre_producto; ?>" id="productonombre" name="productonombre">
                     <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Ponganse en contacto conmigo</button>
+                <button type="submit" class="btn btn-primary mb-2">Contacta con nosotros</button>
             </form>
 
 

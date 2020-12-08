@@ -68,6 +68,11 @@ body {
     margin: auto;
 }
 
+.editPro {
+    background-color: white;
+    margin: auto;
+}
+
 .nombre>a>h5 {
     width: max-content;
     display: inline-block;

@@ -71,8 +71,14 @@ include_once "conexionBBDD.php";
             </div>
             <div style="width: 100%;">
                 <!--aqui va la descripcion-->
-                <p style="font-size: 2vmin; padding: 15px;">Aqui os presentamos nuestra pagina oficial de productos  de VSR Parts aqui puedes encontrar todos nuestros productos, aun no tenemos un sitema eficaz de compra, pero te damos la opcion de que nos contactes y nos lances la pregunta que desees o nos avises del producto que quieres, y nosotros nos pondremos en contacto con usted lo antes posible. Si te interesa cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas tendras un acceso a nuestros productos en ebay y wallapop que ya contienen un propio sistema de pago y envios, aqui te damos todas las posibilidades y comodidades para la compra de cualquiera de nuestros productos.
-            si quieres mas informacion sobre los productos envios o montaje de los productos, no dudes en contactarno.</p>
+                <p style="font-size: 2vmin; padding: 15px;">Aqui os presentamos nuestra pagina oficial de productos  de VSR 
+                Parts aqui puedes encontrar todos nuestros productos, puedes hacer tu pedido en esta pagina a traves del botón 
+                "contacta con nosotros"   y nosotros nos pondremos en contacto con usted lo antes posible y si te interesa 
+                cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas
+                 tendras un acceso a nuestros productos en ebay y wallapop que ya contienen su propio sistema de pago y
+                  envios.\n Te damos todas las posibilidades y comodidades para la compra de cualquiera de 
+                  nuestros productos.  \n Si quieres mas informacion sobre los productos envios o montaje de los
+                   productos, no dudes en contactarnos.</p>
             </div>
             
             <div style="width: 100%;"><h5>Catalogo de Productos Estrella</h5></div>

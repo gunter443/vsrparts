@@ -31,7 +31,7 @@ if (!$_SESSION['sesion']) {
             </div>
         </div>
         <div class="contenido">
-            <h1 class="tituloForm">Introduce un empleado</h1>
+            <h1 class="tituloForm">Introduce un Producto</h1>
             <div class="formularioadd">
                 <form action="./insertar.php" method="post">
                 <div class="form-group row">
