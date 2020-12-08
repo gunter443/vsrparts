@@ -122,29 +122,29 @@ if ($producto === FALSE) {
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Contacta con nosotros</button>
             </form>
-            <div style="width: 100%; border: 1px solid black; margin: 5px; max-height: 500px; overflow-y: scroll;">
-            <div style="width: 100%;">
-                <form class="form-inline" action='guardComentario.php' method="post" id='mailForm'>
-                    <label for="comen">telefono o correo de contacto </label>
-                    <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
-                    <input type="text" class="form-control" id="comen" name="comen" placeholder="Comenta sobre el producto">
-                    <button type="submit" class="btn btn-primary mb-2">comenta</button>
-                </form>
+            <div style="width: 100%; border: 1px solid black; margin: 5px; max-height: 600px; overflow-x: auto; box-sizing: border-box;">
+                <div style="width: 100%;">
+                    <form class="form-inline" action='guardComentario.php' method="post" id='mailForm'>
+                        <label for="comen">telefono o correo de contacto </label>
+                        <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
+                        <input type="text" class="form-control" id="comen" name="comen" placeholder="Comenta sobre el producto">
+                        <button type="submit" class="btn btn-primary mb-2">comenta</button>
+                    </form>
                 </div>
                 <div style="width: 100%; ">
-                <?php
-                if ($sqlc = $conexion->query("SELECT * FROM comentarios WHERE id_productos = $id;")) {
-                $coments = $sqlc->fetchAll(PDO::FETCH_OBJ);
-                foreach ($coments as $foto) {
-                    echo "<div style='width: 100%; margin: 10px; padding: 10px; border: 1px solid blue; border-radius: 5%;'>" ;
-                    echo $foto->comentario;
-                    echo "</div>";
-                }
-                }else{
-                    echo "<p>no hay ningun comentario</p>";
-                }
+                    <?php
+                    if ($sqlc = $conexion->query("SELECT * FROM comentarios WHERE id_productos = $id;")) {
+                        $coments = $sqlc->fetchAll(PDO::FETCH_OBJ);
+                        foreach ($coments as $foto) {
+                            echo "<div style='width: 100%; margin: 10px; padding: 10px; border: 1px solid blue; border-radius: 10%;'>";
+                            echo $foto->comentario;
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "<p>no hay ningun comentario</p>";
+                    }
 
-                ?>
+                    ?>
                 </div>
             </div>
 

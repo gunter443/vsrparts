@@ -76,8 +76,8 @@ include_once "conexionBBDD.php";
                 "contacta con nosotros"   y nosotros nos pondremos en contacto con usted lo antes posible y si te interesa 
                 cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas
                  tendras un acceso a nuestros productos en ebay y wallapop que ya contienen su propio sistema de pago y
-                  envios.\n Te damos todas las posibilidades y comodidades para la compra de cualquiera de 
-                  nuestros productos.  \n Si quieres mas informacion sobre los productos envios o montaje de los
+                  envios.<br/>  Te damos todas las posibilidades y comodidades para la compra de cualquiera de 
+                  nuestros productos.  <br/>  Si quieres mas informacion sobre los productos envios o montaje de los
                    productos, no dudes en contactarnos.</p>
             </div>
             
