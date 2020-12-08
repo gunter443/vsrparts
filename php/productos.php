@@ -26,7 +26,7 @@ include_once "conexionBBDD.php";
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"> <p style="font-size: 2vmin;">VSR Parts</p></a>
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"> <h5><strong>VSR Parts</strong></h5></a>
                 <input  id="search" class="form-control" type="text" placeholder="buscador">
             </div>
             <div class="fila_botones">

@@ -52,6 +52,13 @@ body {
     margin: 1%;
 }
 
+.nombre>a>h5 {
+    width: max-content;
+    display: inline-block;
+    font-family: fantasy;
+    color: black;
+}
+
 .nombre a img {
     height: 100%;
 }

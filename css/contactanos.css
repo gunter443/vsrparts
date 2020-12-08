@@ -30,7 +30,7 @@
 }
 
 body {
-    background-image: url("../fotos/lanciaFondo.jpg");
+    background-image: url("../fotos/fondouno.jpg");
     background-repeat: repeat;
     background-attachment: fixed;
 }
@@ -50,6 +50,13 @@ body {
 
 .nombre a {
     margin: 1%;
+}
+
+.nombre>a>h5 {
+    width: max-content;
+    display: inline-block;
+    font-family: fantasy;
+    color: black;
 }
 
 .nombre a img {

@@ -56,12 +56,19 @@ body {
 
 .nombre {
     margin: 0 auto 0 10px;
-    width: 80%;
+    width: 95%;
     height: 50%;
 }
 
 .nombre a {
     margin: 1%;
+}
+
+.nombre>a>h5 {
+    width: max-content;
+    display: inline-block;
+    font-family: fantasy;
+    color: black;
 }
 
 .nombre a img {
@@ -76,6 +83,7 @@ body {
 .nombre input {
     width: 25%;
     margin: 1vmin 0 0 auto;
+    float: right;
 }
 
 
