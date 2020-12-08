@@ -34,7 +34,9 @@ if ($producto === FALSE) {
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"> <h5><strong>VSR Parts</strong></h5></a>
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal">
+                    <h5><strong>VSR Parts</strong></h5>
+                </a>
             </div>
             <div class="fila_botones">
                 <a href="./index.php">Página Principal</a>
@@ -107,7 +109,7 @@ if ($producto === FALSE) {
                     <div class="espProduc">
                         <p class="btn btn-info"><?php echo $producto->marca_producto; ?></p>
                         <p class="btn btn-info"><?php echo $producto->modelo_producto; ?></p>
-                </div>
+                    </div>
                 </div>
             </div>
             <form class="form-inline" action='mailSimple.php' method="post" id='mailForm'>
@@ -120,6 +122,31 @@ if ($producto === FALSE) {
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Contacta con nosotros</button>
             </form>
+            <div style="width: 100%; border: 1px solid black; margin: 5px; max-height: 500px; overflow-y: scroll;">
+            <div style="width: 100%;">
+                <form class="form-inline" action='guardComentario.php' method="post" id='mailForm'>
+                    <label for="comen">telefono o correo de contacto </label>
+                    <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
+                    <input type="text" class="form-control" id="comen" name="comen" placeholder="Comenta sobre el producto">
+                    <button type="submit" class="btn btn-primary mb-2">comenta</button>
+                </form>
+                </div>
+                <div style="width: 100%; ">
+                <?php
+                if ($sqlc = $conexion->query("SELECT * FROM comentarios WHERE id_productos = $id;")) {
+                $coments = $sqlc->fetchAll(PDO::FETCH_OBJ);
+                foreach ($coments as $foto) {
+                    echo "<div style='width: 100%; margin: 10px; padding: 10px; border: 1px solid blue; border-radius: 5%;'>" ;
+                    echo $foto->comentario;
+                    echo "</div>";
+                }
+                }else{
+                    echo "<p>no hay ningun comentario</p>";
+                }
+
+                ?>
+                </div>
+            </div>
 
 
 
