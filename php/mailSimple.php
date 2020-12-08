@@ -4,13 +4,13 @@
   //un objeto de la misma
   
   
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-include_once 'lib/Exception.php';
-include_once 'lib/PHPMailer.php';
-include_once 'lib/SMTP.php';
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\SMTP;
+  use PHPMailer\PHPMailer\Exception;
+  
+  include_once '../lib/Exception.php';
+  include_once '../lib/PHPMailer.php';
+  include_once '../lib/SMTP.php';
 
 $mail = new PHPMailer(true);
 $info_contacto =  $_POST['email'];
