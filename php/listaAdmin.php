@@ -25,8 +25,8 @@ if (!$_SESSION['sesion']) {
 <body>
     <div id="body" class="contenedorP">
         <div class="cabecera">
-            <div class="nombre">
-                <a href="./index.php"><img src="../fotos/Vsr parts/iconoPagina.png" alt="Página Principal"></a>                
+            <div class="nombre">         
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"></a>       
                 <button id="cerrarses" class="mini">Cerrar sesion</button>
             </div>
         </div>

@@ -29,23 +29,11 @@
     /*box-shadow: 0px 0px 20px 0px #2c2222ad;*/
 }
 
-
-/**/
-
 body {
     background-image: url("../fotos/fondouno.jpg");
     background-repeat: repeat;
     background-attachment: fixed;
 }
-
-
-/*body {
-    background-image: url("../fotos/vsrLogo.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-clip: content-box;
-}*/
 
 .cabecera {
     width: 100%;
@@ -54,67 +42,9 @@ body {
     background-color: rgb(233, 230, 230);
 }
 
-.nombre {
-    margin: 0 auto 0 10px;
-    width: 80%;
-    height: 50%;
-}
-
-.nombre a {
-    margin: 1%;
-}
-
-.nombre a img {
-    height: 100%;
-}
-
-.form-control {
-    display: inline-flex !important;
-    margin: 1vmin 0 0 auto;
-}
-
-.nombre input {
-    width: 25%;
-    margin: 1vmin 0 0 auto;
-}
-
-
-/*
-.nombre {
-    display: inline-block;
-    padding: 10px;
-    height: 50%;
-    width: 100%;
-}
-.nombre a {
-    margin: 1vmin 0;
-}
-
-.nombre a img {
-    height: 100%;
-}*/
-
-.fila_botones {
-    margin: 0;
-    height: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.fila_botones a {
-    font-size: 1.75vmin;
-    width: 100%;
-    padding: 1vmin;
-    text-align: center;
-    background-color: rgba(96, 104, 105, 0.842);
-    border: 1px solid black;
-    text-decoration: none;
-    color: white;
-}
-
-.fila_botones a:hover {
-    background-color: rgb(65, 145, 125);
+.tablafotos {
+    margin: auto;
+    width: max-content;
 }
 
 .contenido {
@@ -174,26 +104,9 @@ body {
     width: 10vmin;
     top: 49%;
     right: 2vmin;
-    background-color: white;
     z-index: 1;
+    background-color: white;
     position: fixed;
-}
-
-#mailForm {
-    margin: 0 0 0 auto;
-}
-
-.izquierda {
-    margin: 0 0 0 auto;
-}
-
-.espProduc {
-    display: inline;
-    width: 100%;
-}
-
-.espProduc p {
-    width: 30%;
 }
 
 a:link,

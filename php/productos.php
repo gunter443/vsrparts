@@ -26,7 +26,7 @@ include_once "conexionBBDD.php";
     <div id="body" class="contenedorP">
         <div class="cabecera">
             <div class="nombre">
-                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"></a>
+                <a href="./index.php"><img src="../fotos/vsrLogo.jpg" alt="Página Principal"> <p style="font-size: 2vmin;">VSR Parts</p></a>
                 <input  id="search" class="form-control" type="text" placeholder="buscador">
             </div>
             <div class="fila_botones">
@@ -57,6 +57,10 @@ include_once "conexionBBDD.php";
                 ?>
                 <!--php de crear targetas https://getbootstrap.com/docs/4.0/components/card/-->
             </div>
+        </div>
+        <div class="pie">
+            <p>VSR PARTS shop oficial</p>
+            <p>2020 &copy</p>
         </div>
     </div>
     <span class="publicidad">

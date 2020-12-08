@@ -124,6 +124,10 @@ if ($producto === FALSE) {
 
 
         </div>
+        <div class="pie">
+            <p>VSR PARTS shop oficial</p>
+            <p>2020 &copy</p>
+        </div>
     </div>
     <span class="publicidad">
         <a href="https://www.ebay.es/usr/vsrparts"><img src="../fotos/ebay.png" alt="wallapop"></a>

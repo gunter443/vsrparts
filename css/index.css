@@ -30,10 +30,21 @@
 }
 
 body {
+    background-image: url("../fotos/fondouno.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+/*body {
     background-image: url("../fotos/lanciaFondo.jpg");
     background-repeat: repeat;
     background-attachment: fixed;
 }
+
+body {
+    background-color: turquoise;
+}*/
 
 .cabecera {
     width: 100%;
@@ -43,7 +54,7 @@ body {
 }
 
 .nombre {
-    margin: auto;
+    margin: 0 auto 0 10px;
     width: 80%;
     height: 50%;
 }
@@ -72,7 +83,7 @@ body {
     background-color: rgba(96, 104, 105, 0.842);
     border: 1px solid black;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .fila_botones a:hover {

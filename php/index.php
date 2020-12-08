@@ -71,7 +71,7 @@ include_once "conexionBBDD.php";
             </div>
             <div style="width: 100%;">
                 <!--aqui va la descripcion-->
-                <p style="font-size: 7vmin; padding: 15px;">Aqui os presentamos nuestra pagina oficial de productos  de VSR Parts aqui puedes encontrar todos nuestros productos, aun no tenemos un sitema eficaz de compra, pero te damos la opcion de que nos contactes y nos lances la pregunta que desees o nos avises del producto que quieres, y nosotros nos pondremos en contacto con usted lo antes posible. Si te interesa cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas tendras un acceso a nuestros productos en ebay y wallapop que ya contienen un propio sistema de pago y envios, aqui te damos todas las posibilidades y comodidades para la compra de cualquiera de nuestros productos.
+                <p style="font-size: 2vmin; padding: 15px;">Aqui os presentamos nuestra pagina oficial de productos  de VSR Parts aqui puedes encontrar todos nuestros productos, aun no tenemos un sitema eficaz de compra, pero te damos la opcion de que nos contactes y nos lances la pregunta que desees o nos avises del producto que quieres, y nosotros nos pondremos en contacto con usted lo antes posible. Si te interesa cualquiera de nuestros productos, y prefieres otro sistema de compra a la derecha de todas las paginas tendras un acceso a nuestros productos en ebay y wallapop que ya contienen un propio sistema de pago y envios, aqui te damos todas las posibilidades y comodidades para la compra de cualquiera de nuestros productos.
             si quieres mas informacion sobre los productos envios o montaje de los productos, no dudes en contactarno.</p>
             </div>
             
@@ -97,14 +97,15 @@ include_once "conexionBBDD.php";
                 <!--php de crear targetas https://getbootstrap.com/docs/4.0/components/card/-->
             </div>
         </div>
-    </div>
-    <div class="pie">
+        <div class="pie">
         <p>VSR PARTS shop oficial</p>
         <p>2020 &copy</p>
     </div>
+    </div>
+    
     <span class="publicidad">
         <a href="https://www.ebay.es/usr/vsrparts"><img src="../fotos/ebay.png" alt="wallapop"></a>
-        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src=".../fotos/wallapop.png" alt="wallapop"></a>
+        <a href="https://es.wallapop.com/user/vsrp-333289123"><img src="../fotos/wallapop.png" alt="wallapop"></a>
         <a href="https://instagram.com/vsr.parts?igshid=2qkxarawqez3"><img src="../fotos/insta.svg" alt=""></a>
     </span>
 </body>

@@ -22,7 +22,7 @@ if ($productos === FALSE) {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="../fotos/vsrLogo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/editarpro.css">
     <title>Editar datos</title>
 </head>
 
@@ -32,27 +32,28 @@ if ($productos === FALSE) {
         <div>
             <form action="./guardarDatos.php" method="post">
                 <input type="hidden" value="<?php echo $productos->idproductos; ?>" name="id">
+                <div class="form-group row">
                 <label for="nomPro">Nombre Producto<span>*</span></label>
                 <input type="text" value="<?php echo $productos->nombre_producto; ?>" name="nomPro" id="nomPro" title="Nombre Producto" required>
-                <br>
+                </div><div class="form-group row">
                 <label for="precio">Precio<span>*</span></label>
                 <input type="number" value="<?php echo $productos->precio_producto; ?>" name="precio" id="precio" required>
-                <br>
+                </div><div class="form-group row">
                 <label for="des">Descricion<span>*</span></label>
                 <textarea type="text" value="<?php echo $productos->descripcion_producto; ?>" name="des" id="des" required><?php echo $productos->descripcion_producto; ?></textarea>
-                <br>
+                </div><div class="form-group row">
                 <label for="marcPro">Marca</label>
                 <input type="text" value="<?php echo $productos->marca_producto; ?>" name="marcPro" id="marcPro">
-                <br>
+                </div><div class="form-group row">
                 <label for="modPro">Modelos</label>
                 <input type="text" value="<?php echo $productos->modelo_producto; ?>" name="modPro" id="modPro">
-                <br>
+                </div><div class="form-group row">
                 <label for="foto">Foto Principal</label>
                 <input type="text" value="<?php echo $productos->foto_producto; ?>" name="foto" id="foto">
-                <br>
+                </div><div class="form-group row">
                 <label for="prin">Favorito</label>
                 <input type="text" value="<?php echo $productos->principal; ?>" name="prin" id="prin" pattern="[0-1]{1}">
-                <br>
+                </div>
                 <input type="submit" value="Guardar cambios" id="btn">
             </form>
             <!-- formulario de 1 campo invisible y un campo visible para añadir nombre fotos, y una lista para ver los añadidos-->
