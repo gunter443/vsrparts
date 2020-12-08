@@ -124,7 +124,7 @@ if ($producto === FALSE) {
             </form>
             <div style="width: 100%; border: 1px solid black; margin: 5px; max-height: 600px; overflow: auto; box-sizing: border-box;">
                 <div style="width: 80%;">
-                    <form class="form-group row" style="width: 80%;" action='guardComentario.php' method="post" id='mailForm'>
+                    <form class="form-group row" style="width: 80%; margin: auto;" action='guardComentario.php' method="post" id='mailForm'>
                         <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
                         <input type="text" class="form-control" id="comen" name="comen" placeholder="Comenta sobre el producto">
                         <button type="submit" class="btn btn-primary mb-2">comenta</button>
