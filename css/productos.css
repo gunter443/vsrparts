@@ -64,11 +64,19 @@ body {
     margin: 1%;
 }
 
+.jumbotron-fluid {
+    margin: auto;
+}
+
 .nombre>a>h5 {
     width: max-content;
     display: inline-block;
     font-family: fantasy;
     color: black;
+}
+
+.form-inline {
+    margin: auto;
 }
 
 .nombre a img {
