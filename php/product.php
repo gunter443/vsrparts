@@ -122,10 +122,9 @@ if ($producto === FALSE) {
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">Contacta con nosotros</button>
             </form>
-            <div style="width: 100%; border: 1px solid black; margin: 5px; max-height: 600px; overflow-x: auto; box-sizing: border-box;">
-                <div style="width: 100%;">
-                    <form class="form-inline" action='guardComentario.php' method="post" id='mailForm'>
-                        <label for="comen">telefono o correo de contacto </label>
+            <div style="width: 100%; border: 1px solid black; margin: 5px; max-height: 600px; overflow: auto; box-sizing: border-box;">
+                <div style="width: 80%;">
+                    <form class="form-group row" style="width: 80%;" action='guardComentario.php' method="post" id='mailForm'>
                         <input type="hidden" value="<?php echo $id; ?>" id="idpro" name="idpro">
                         <input type="text" class="form-control" id="comen" name="comen" placeholder="Comenta sobre el producto">
                         <button type="submit" class="btn btn-primary mb-2">comenta</button>
@@ -136,7 +135,7 @@ if ($producto === FALSE) {
                     if ($sqlc = $conexion->query("SELECT * FROM comentarios WHERE id_productos = $id;")) {
                         $coments = $sqlc->fetchAll(PDO::FETCH_OBJ);
                         foreach ($coments as $foto) {
-                            echo "<div style='width: 100%; margin: 10px; padding: 10px; border: 1px solid blue; border-radius: 10%;'>";
+                            echo "<div style='width: 90%; margin: 10px; padding: 10px; border: 1px solid blue; border-radius: 10%;'>";
                             echo $foto->comentario;
                             echo "</div>";
                         }
