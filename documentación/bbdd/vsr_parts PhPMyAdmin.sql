@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-12-2020 a las 19:50:35
+-- Tiempo de generación: 09-12-2020 a las 17:36:14
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.3
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `vsr_parts`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `id_comentario` int(11) NOT NULL,
+  `id_productos` int(11) NOT NULL,
+  `comentario` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `puntos` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id_comentario`, `id_productos`, `comentario`, `puntos`) VALUES
+(1, 3, 'Funciona muy bien ', NULL),
+(2, 3, 'me gusto el producto', NULL);
 
 -- --------------------------------------------------------
 
@@ -152,6 +173,12 @@ INSERT INTO `usuarios` (`iduser`, `nom_user`, `apellido_user`, `nick_user`, `pas
 --
 
 --
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`id_comentario`);
+
+--
 -- Indices de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
@@ -172,6 +199,12 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
